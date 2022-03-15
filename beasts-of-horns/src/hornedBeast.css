@@ -1,0 +1,19 @@
+.my-horned-beast{
+    margin-bottom:3rem;
+    margin-top:3rem;
+    padding:.1rem;
+    margin-left:1rem;
+
+}
+
+#horned-beast-container{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+#horned-beast-container span{
+    font-style: italic;
+    color:#aa2120;
+}
+

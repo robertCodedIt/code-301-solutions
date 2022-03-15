@@ -1,27 +1,29 @@
 //import hornedbeasts array in data.json
-import React from 'react'
-const beasts = require('./data.json');
-
-console.log(beasts)
+import React from "react";
+import './hornedBeast.css'
+import { Card } from "react-bootstrap";
+const beasts = require("./data.json");
 
 export default class HornedBeast extends React.Component {
-
-    render(){
-
-        return(
-            <>
-            {beasts.map((el,idx)=>{
-               return( <div key = {idx}>
-               <h1>
-                   {el.title}
-               </h1>
-               <img src={el.image_url}/>
-               <span>{el.description}</span>
-               
-
-                </div>)
-            })}
-            </>
-        )
-    }
+  render() {
+    return (
+      <div id = "horned-beast-container">
+        {beasts.map((el, idx) => {
+          return (
+            <Card className = 'my-horned-beast' style = {{width:'18rem'}} key={idx}>
+              <Card.Body>
+                <Card.Header>
+                  <h1>{el.title}</h1>
+                </Card.Header>
+                <Card.Img alt={el.keyword} src={el.image_url} />
+                <Card.Footer>
+                  <span>{el.description}</span>
+                </Card.Footer>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
+    );
+  }
 }

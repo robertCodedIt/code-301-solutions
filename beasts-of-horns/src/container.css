@@ -1,0 +1,7 @@
+#main-container{
+    display:grid;
+    place-items:center;
+    margin-bottom:3rem;
+    background-color:#000;
+    border:20px solid #4f0000;
+}
